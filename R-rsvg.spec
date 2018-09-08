@@ -4,14 +4,13 @@
 #
 Name     : R-rsvg
 Version  : 1.3
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/rsvg_1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsvg_1.3.tar.gz
 Summary  : Render SVG Images into PDF, PNG, PostScript, or Bitmap Arrays
 Group    : Development/Tools
 License  : MIT
 Requires: R-rsvg-lib
-Requires: R-spelling
 BuildRequires : R-spelling
 BuildRequires : buildreq-R
 BuildRequires : librsvg-dev
@@ -37,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536419150
+export SOURCE_DATE_EPOCH=1536419540
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1536419150
+export SOURCE_DATE_EPOCH=1536419540
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
