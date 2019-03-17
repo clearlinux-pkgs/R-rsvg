@@ -4,13 +4,13 @@
 #
 Name     : R-rsvg
 Version  : 1.3
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/rsvg_1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsvg_1.3.tar.gz
 Summary  : Render SVG Images into PDF, PNG, PostScript, or Bitmap Arrays
 Group    : Development/Tools
 License  : MIT
-Requires: R-rsvg-lib
+Requires: R-rsvg-lib = %{version}-%{release}
 BuildRequires : R-spelling
 BuildRequires : buildreq-R
 BuildRequires : librsvg-dev
@@ -36,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536419540
+export SOURCE_DATE_EPOCH=1552856525
 
 %install
+export SOURCE_DATE_EPOCH=1552856525
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1536419540
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -75,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rsvg|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rsvg || :
 
 
 %files
@@ -103,10 +102,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/rsvg/help/rsvg.rdx
 /usr/lib64/R/library/rsvg/html/00Index.html
 /usr/lib64/R/library/rsvg/html/R.css
-/usr/lib64/R/library/rsvg/libs/symbols.rds
+/usr/lib64/R/library/rsvg/tests/spelling.R
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/rsvg/libs/rsvg.so
-/usr/lib64/R/library/rsvg/libs/rsvg.so.avx2
-/usr/lib64/R/library/rsvg/libs/rsvg.so.avx512
