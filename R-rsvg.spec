@@ -4,7 +4,7 @@
 #
 Name     : R-rsvg
 Version  : 2.3.2
-Release  : 43
+Release  : 44
 URL      : https://cran.r-project.org/src/contrib/rsvg_2.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsvg_2.3.2.tar.gz
 Summary  : Render SVG Images into PDF, PNG, (Encapsulated) PostScript, or
