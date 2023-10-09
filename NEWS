@@ -1,3 +1,9 @@
+2.6.0
+  - Fix a resizing bug with rsvg_svg() see #41
+  - MacOS: update to librsvg 2.56.3
+  - Windows: update to librsvg 2.57.0
+  - Add some tests
+
 2.5.0
   - Windows: update to librsvg 2.50.5 and fix rendering of embedded
     png/jpeg/tiff images.
